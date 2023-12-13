@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>MIDTERM</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+        background-color:cadetblue;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color:beige;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .container {
+        display: flex;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 15%;
+        background-color:#ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.991);
+        padding: 20px;
+        margin-left: 10px;
+    }
+
+    .sidebar h3 {
+        margin-top: 0;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        margin-bottom: 10px;
+    }
+    .row{padding-left: 13px; color: crimson;}
+
+    .card {
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup chat - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 50px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 1000px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #3f3f3f;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+table img {
+      padding: 10px; 
+      margin-top: -50px; 
+    }
+       </style>
+</head>
+<body>
+    <tbody>
+        <tr>
+          <td>
+              <header>
+              <!--NAVBAR CODE START-->
+                  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                      <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img src="iimages/1.jpg" alt="" style="width:15%; padding-left: 10px;"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                              <a class="nav-link active" style="color: crimson;" aria-current="page" href="#"><b>About Me</b></a>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Details
+                              </a>
+                              <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">CV</a></li>
+                                <li><a class="dropdown-item" href="#">Portfolio</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Social Media</a></li>
+                              </ul>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link disabled" aria-disabled="true"></a>
+                            </li>
+                          </ul>
+                          <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                          </form>
+                        </div>
+                      </div>
+                    </nav>
+                      <!--NAVBAR CODE END-->
+              </header>
+          </td>
+        </tr>
+
+       <!--SIDE TABLE1 START-->
+        <div class="container">
+            <div class="sidebar">
+                <h3><b>Skills</b></h3>
+                <ul>
+                    <li class="row">Time Management</li>
+                    <li class="row">Teamwork</li>
+                    <li class="row">Creative</li>
+                    <li class="row">Attention to details</li>
+                </ul>
+                <h3><b>Languages</b></h3>
+                <ul>
+                    <li class="row">English</li>
+                    <li class="row">Hindi</li>
+                    <li class="row">Marwari</li>
+                </ul>
+                <br>
+                <br>
+                <br>
+                <h3><b>Work Experience</b></h3>
+                <ul>
+                    <li class="row">Interning at a Kids brand company 'LIL'DRAMA' where I was handling their graphics</li>
+                       </ul>
+             </div>
+             <!--SIDE TABLE1 END-->
+
+          <!--SIDE TABLE2 START-->
+            <div class="card">
+                <img src="images/01.jpg" alt="John" style="width:100%">
+                <br>
+                <h3>Darshna Sarda</h3>
+                <p class="title">Communication Design Student</p>
+                <p>Atlas Skilltech University, ISDI</p>
+                
+                <p><button>Contact</button></p>
+              </div>
+          <!--SIDE TABLE2 END-->
+
+              <!--BOOK TABLE START-->
+              <table>
+                <tr>
+                    <th style="text-align: center;">Book covers</th>
+                    <td style="text-align: center;"><b>Book covers</b></td>
+                </tr>
+                <tr>
+                    <th><img src="images/225.png" width="350px" alt=""></th>
+                    <td><img src="images/p.png" width="350px" alt=""></td>
+                </tr>
+                <tr>
+                    <th><img src="images/1.png" width="350px" alt=""></th>
+                    <td><img src="images/was she pretty.png" width="350px" alt=""></td>
+                </tr>
+              </table>
+              <!--BOOK TABLE END-->
+
+              <!--CHAT BOX START-->
+              <div class="chat-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                  <h1>Chat</h1>
+              
+                  <label for="msg"><b>Message</b></label>
+                  <textarea placeholder="Type message.." name="msg" required></textarea>
+              
+                  <button type="submit" class="btn">Send</button>
+                  <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                </form>
+              </div>
+              <!--CHAT BOX END-->
+              
+
+
+                                 
+    </body>
+</html>
